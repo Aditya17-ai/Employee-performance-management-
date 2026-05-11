@@ -1,158 +1,126 @@
-Employee Performance Analytics System
-Tech Stack
-Python — Data analysis, automation, visualization
-SQLite / SQL — KPI aggregation and querying
-Tableau — Interactive dashboards and analytics reporting
-Microsoft Power Apps — HR management interface and workflow automation
-Employee Performance Analytics (SQL + Python + Tableau + PowerApps)
-Analyze employee performance and departmental productivity using SQL (SQLite) for KPI aggregation, Python for analytics and visualization, Tableau for interactive dashboards, and PowerApps for HR workflow integration.
-This project transforms HR data into actionable business insights, identifying high performers, productivity trends, attendance patterns, and departmental KPIs.
+Employee Performance Analytics (SQL + Python)
+
+Analyze employee performance and departmental productivity using SQL (SQLite) for KPI aggregation and Python for analytics and visualization.
+This project transforms HR data into actionable business insights, identifying high performers, efficiency trends, and departmental KPIs.
+
+
+---
+
 Overview
+
 This project demonstrates how to:
+
 Use SQL for feature engineering and KPI calculation
-Use Python for data cleaning, analysis, and visualization
-Build Tableau dashboards for business reporting
-Integrate insights into PowerApps for HR operations
-Deliver an end-to-end data analytics workflow
+
+Use Python for data analysis and visualization
+
+Deliver data-driven HR insights in an end-to-end workflow
+
+
+
+---
+
 Objectives
+
 Compute department-level performance indicators
-Analyze employee efficiency and attendance
+
+Assess employee efficiency and attendance
+
 Visualize relationships between workload, tasks, and ratings
-Track departmental productivity trends
-Create interactive dashboards for HR managers
-Generate automated summary reports
+
+Generate clean and ready-to-use summary reports
+
+
+
+---
+
 Project Structure
-Bash
-employee-performance-analytics/
-├── README.md
-├── requirements.txt
-├── data/
-│   └── employees.csv
-├── src/
-│   ├── create_db.py
-│   ├── queries.sql
-│   ├── analyze_performance.py
-│   ├── tableau_export.py
-│   └── utils.py
-├── tableau/
-│   └── employee_dashboard.twb
-├── powerapps/
-│   └── integration_notes.md
-└── outputs/
-    ├── department_kpis.csv
-    ├── performance_summary.csv
-    ├── dashboard_data.csv
-    └── charts/
-        ├── avg_rating_by_department.png
-        ├── performance_vs_hours.png
-        ├── task_completion_rate.png
-        └── attendance_trends.png
+
+employee-performance-analytics/  
+├── README.md  
+├── requirements.txt  
+├── data/  
+│   └── employees.csv  
+├── src/  
+│   ├── create_db.py  
+│   ├── queries.sql  
+│   ├── analyze_performance.py  
+│   └── utils.py  
+└── outputs/  
+    ├── department_kpis.csv  
+    ├── performance_summary.csv  
+    └── charts/  
+        ├── avg_rating_by_department.png  
+        ├── performance_vs_hours.png  
+        └── task_completion_rate.png
+
+
+---
+
 Dataset Description
-Column
-Description
-employee_id
-Unique employee identifier
-name
-Employee name
-department
-Department name
-role
-Employee role
-date
-Record date
-tasks_completed
-Tasks completed per day
-hours_worked
-Total working hours
-rating
-Performance rating (1–5)
-projects
-Active projects count
-absences
-1 if absent, else 0
-The dataset is synthetic and generated with realistic departmental productivity patterns.
-SQL Analytics (queries.sql)
-The SQL workflow generates:
-1. department_kpis
-Department-level insights:
-Average employee ratings
-Total completed tasks
-Productivity scores
-Absence percentages
-Total working hours
-2. employee_summary
-Employee-level metrics:
-Total tasks completed
+
+Column	Description
+
+employee_id	Unique employee identifier
+name	Employee name
+department	Department name (Engineering, Sales, etc.)
+role	Role title
+date	Record date (YYYY-MM-DD)
+tasks_completed	Number of tasks completed
+hours_worked	Hours worked on that day
+rating	Daily performance rating (1–5)
+projects	Active projects
+absences	1 if absent, else 0
+
+
+> The dataset (employees.csv) is synthetic, generated with realistic departmental trends and biases.
+
+
+
+
+---
+
+SQL Logic: src/queries.sql
+
+The SQL script creates views and extracts three analytical datasets:
+
+1. department_kpis – Department-level KPIs:
+
+Average rating
+
+Tasks per department
+
+Total hours
+
+Absence rates
+
+
+
+2. employee_summary – Individual performance summaries:
+
+Total tasks, hours, projects, absences
+
 Average ratings
-Project counts
-Attendance records
-Tasks-per-hour efficiency
-3. daily_productivity
-Daily operational analytics:
-Workload distribution
-Productivity fluctuations
-Performance trends over time
-Python Analytics
-Using Python libraries:
-pandas → Data manipulation
-matplotlib & seaborn → Visualizations
-sqlite3 → Database interaction
-numpy → Statistical analysis
-Key Analyses
-Employee efficiency ranking
-Correlation between hours worked and ratings
-Department productivity comparison
-Attendance impact analysis
-Tableau Dashboard Features
-Built in Tableau:
-Department KPI dashboard
-Employee performance leaderboard
-Attendance heatmaps
-Productivity trend charts
-Interactive filters by department and role
-Dashboard Insights
-Top-performing departments
-Employees with highest efficiency
-Attendance vs productivity patterns
-Monthly workload distribution
-PowerApps Integration
-Integrated with Microsoft Power Apps to:
-Create HR management forms
-Display real-time employee KPIs
-Automate performance review workflows
-Enable manager-level approvals
-Track attendance and productivity centrally
+
+Tasks per hour (efficiency)
+
+
+
+3. daily_productivity – Day-wise workload and productivity data.
+
+
+
+
+---
+
 Visualizations
+
 Average Rating by Department
-Compare departmental performance quality
-Performance vs Hours Worked
-Identify productivity saturation trends
-Task Completion Rate
-Analyze operational efficiency
-Attendance Trends
-Detect absenteeism impact on productivity
-Business Impact
-This project helps organizations:
-Improve workforce productivity
-Identify high-performing employees
-Detect operational inefficiencies
-Support data-driven HR decisions
-Automate reporting workflows
-Enhance employee performance tracking
-Skills Demonstrated
-SQL Query Optimization
-Data Engineering
-Exploratory Data Analysis (EDA)
-KPI Development
-Dashboard Design
-HR Analytics
-Business Intelligence
-Workflow Automation
-Data Visualization
-Future Enhancements
-Machine Learning-based performance prediction
-Employee attrition forecasting
-Real-time dashboard deployment
-Cloud database integration
-API integration with HRMS platforms
-Automated email reporting system
+
+Chart: outputs/charts/avg_rating_by_department.png
+
+<img width="1200" height="750" alt="avg_rating_by_department" src="https://github.com/user-attachments/assets/6b5666ae-d7ed-4a56-948b-2944122a24e0" />  
+Mention these Python   
+Tableau  
+Sql  
+Powerapps technologies 
